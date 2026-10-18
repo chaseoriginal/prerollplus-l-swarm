@@ -18,5 +18,8 @@ services:
       restart_policy:
         condition: on-failure
     volumes:
-      - /var/lib/docker/volumes/${container_name}/config/:/config
+      - prerollplus_config:/config
       - /media/Multimedia/Pre-Rolls/:/prerolls
+
+volumes:
+  prerollplus_config:
